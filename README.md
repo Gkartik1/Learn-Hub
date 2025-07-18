@@ -4,6 +4,9 @@
 
 **LearnHub** is a modern, full-featured web platform designed to empower technology students and mentors by providing a comprehensive ecosystem for learning, collaboration, and growth.
 
+
+<img width="1876" height="863" alt="image" src="https://github.com/user-attachments/assets/ac764e88-6a90-456f-b3f5-f94c14b202b5" />
+
 ---
 ## 🚀 Features
 
@@ -58,7 +61,10 @@ http://localhost:5173
 
 ##  Project Structure
 
-<img width="1876" height="863" alt="image" src="https://github.com/user-attachments/assets/ac764e88-6a90-456f-b3f5-f94c14b202b5" />
+
+
+<img width="1898" height="1007" alt="image" src="https://github.com/user-attachments/assets/2866393e-5088-4fe7-8a67-4a21a48a3df4" />
+
 
 
 ## Outputs

@@ -1,0 +1,258 @@
+/* src/styles/Roadmaps.css */
+
+/* --- THEME & FONT VARIABLES --- */
+:root {
+  --font-primary: 'Inter', sans-serif;
+  --bg-dark: #0D1117;
+  --bg-soft-dark: #161B22;
+  --border-dark: #30363D;
+  --text-light: #C9D1D9;
+  --text-muted: #8B949E;
+  --accent-blue: #58A6FF;
+  --accent-green: #3FB950;
+  --accent-red: #F85149;
+  --accent-glow: rgba(88, 166, 255, 0.15);
+  --border-radius: 12px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* --- BASE PAGE STYLES --- */
+.roadmaps-page {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem 1.5rem 6rem 1.5rem;
+  font-family: var(--font-primary);
+  color: var(--text-light);
+}
+
+.roadmaps-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.roadmaps-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+.roadmaps-header p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 500px;
+  margin: auto;
+}
+
+/* --- DASHBOARD & CONTROLS --- */
+.progress-dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  background: var(--bg-soft-dark);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-dark);
+  margin-bottom: 2rem;
+}
+.dashboard-stat {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.stat-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+}
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.roadmaps-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+.search-input {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-dark);
+  background: var(--bg-dark);
+  color: var(--text-light);
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  flex-grow: 1;
+  max-width: 400px;
+}
+.search-input:focus {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+/* --- ADMIN FORM --- */
+.admin-form { display: flex; gap: 0.5rem; }
+.admin-form input { background: var(--bg-dark); border: 1px solid var(--border-dark); color: var(--text-light); padding: 0.75rem; border-radius: 8px; }
+.admin-form button { background: var(--accent-blue); color: var(--bg-dark); border: none; padding: 0.75rem 1rem; border-radius: 8px; font-weight: 600; cursor: pointer; }
+
+/* --- ROADMAP CONTAINER --- */
+.roadmap-container {
+  background: var(--bg-soft-dark);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.roadmap-main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.roadmap-main-header h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+.overall-progress { text-align: right; }
+.overall-progress span { font-size: 0.9rem; color: var(--text-muted); }
+.progress-bar-container {
+  width: 150px;
+  height: 8px;
+  background: var(--bg-dark);
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+.progress-bar {
+  height: 100%;
+  background-image: linear-gradient(90deg, var(--accent-blue), var(--accent-green));
+  border-radius: 4px;
+}
+
+/* --- TIMELINE & NODES --- */
+.roadmap-timeline {
+  position: relative;
+}
+.roadmap-node-wrapper {
+  position: relative;
+  padding-left: 40px;
+}
+.node-line {
+  position: absolute;
+  left: 14px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: var(--border-dark);
+}
+/* The circle on the timeline */
+.roadmap-node-wrapper::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 20px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--border-dark);
+  border: 2px solid var(--bg-soft-dark);
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+.node-content.completed + .roadmap-node-wrapper::before,
+.roadmap-node-wrapper:has(.node-content.completed)::before {
+    background-color: var(--accent-green);
+}
+
+/* Hide line on last-of-type to not extend past node */
+.roadmap-node-wrapper:last-child > .node-line {
+    display: none;
+}
+.node-children .roadmap-node-wrapper:last-child > .node-line {
+    display: block; /* Re-enable for nested items */
+    height: 20px;
+}
+.has-children.roadmap-node-wrapper:last-child > .node-line {
+    display: block;
+}
+
+
+.node-content {
+  background: var(--bg-dark);
+  border: 1px solid var(--border-dark);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  transition: border-color 0.3s ease;
+}
+.node-content:hover {
+  border-color: var(--accent-blue);
+}
+.node-content.completed {
+  border-color: var(--accent-green);
+  background: #112a18; /* Soft green background */
+}
+.node-content.completed .node-title {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.node-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.expand-btn {
+  background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 1.2rem;
+  padding: 0.2rem; display: flex; align-items: center;
+}
+.node-header input[type="checkbox"] {
+  width: 18px; height: 18px; cursor: pointer; accent-color: var(--accent-green);
+}
+.node-title {
+  flex-grow: 1;
+  font-weight: 500;
+  cursor: pointer;
+}
+.node-xp {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+  background: var(--accent-glow);
+  padding: 0.2rem 0.5rem;
+  border-radius: 50px;
+}
+.node-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.action-btn {
+  background: none; border: none; color: var(--text-muted); cursor: pointer;
+  font-size: 1rem; padding: 0.4rem; border-radius: 50%;
+  transition: color 0.2s, background-color 0.2s;
+}
+.action-btn:hover {
+  color: var(--text-light);
+  background-color: var(--border-dark);
+}
+.progress-display {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    min-width: 40px;
+    text-align: right;
+}
+.title-edit-input {
+    background: #000;
+    color: var(--text-light);
+    border: 1px solid var(--accent-blue);
+    border-radius: 4px;
+    padding: 0.2rem 0.4rem;
+    font-size: 1rem;
+}
+.node-children {
+  padding-top: 1rem;
+}

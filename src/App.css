@@ -1,0 +1,300 @@
+/* src/styles/App.css */
+
+/* Root - base */
+
+
+
+/* Global CSS variables and theme classes */
+
+
+
+
+
+
+:root {
+ --bg-light: #f9fafb;           /* Very light neutral background */
+  --text-light: #1f2937;         /* Dark gray-blue text (instead of black) */
+  --primary-light: #2563eb;      /* Soft but vibrant blue (great for buttons) */
+  --secondary-light: #e5e7eb;    /* Subtle border & input background */
+  --accent-light: #10b981;       /* Optional accent: emerald/green */
+  --card-light: #ffffff; 
+
+  --bg-dark: #121212;
+  --text-dark: #e0e0e0;
+  --primary-dark: #63a9ff;
+  --secondary-dark: #1e1e2e;
+}
+
+body.light-theme {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  --primary-color: var(--primary-light);
+  --secondary-color: var(--secondary-light);
+}
+
+body.dark-theme {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+  --primary-color: var(--primary-dark);
+  --secondary-color: var(--secondary-dark);
+}
+
+/* Basic styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-color);
+  padding: 1rem 2rem;
+  color: var(--primary-color);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.theme-select {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-select:hover,
+.theme-select:focus {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  outline: none;
+}
+
+
+
+
+
+
+:root {
+  --bg-dark: #121212;
+  --text-light: #f1f1f1;
+  --primary-color: #63a9ff;
+  --secondary-color: #1e1e2e;
+  --accent-color: #42f3ff;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  transition: background 0.4s, color 0.4s;
+}
+
+
+
+
+
+
+
+
+
+body.light-theme {
+  background-color: #f9f9f9;
+  color: #282828;
+}
+
+.light-theme .card,
+.light-theme .blog-card {
+  background: #fff;
+  color: #222;
+}
+
+/* Page wrapper */
+.app-wrapper, .page {
+  padding: 2rem;
+  animation: fadeUp 1s ease-in;
+}
+
+/* Headings */
+h1, h2 {
+  color: var(--primary-color);
+}
+
+/* Buttons */
+button, .btn, .cta-button {
+  background-color: var(--primary-color);
+  color: black;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+button:hover {
+  background: var(--accent-color);
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(66, 243, 255, 0.3);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: var(--secondary-color);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  align-items: center;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.nav-right {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-right a {
+  color: white;
+  text-decoration: none;
+}
+
+.theme-btn {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* Blog Cards */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.blog-card {
+  background-color: var(--secondary-color);
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(99, 169, 255, 0.1);
+  transition: 0.4s;
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 5px 30px rgba(63, 169, 255, 0.4);
+}
+
+/* Tags */
+.tag {
+  background: var(--primary-color);
+  padding: 4px 10px;
+  color: black;
+  margin-right: 5px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+}
+
+/* Floating Action Button */
+.fab {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--primary-color);
+  color: white;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  box-shadow: 0 5px 15px rgba(99, 169, 255, 0.4);
+  animation: pulse 2s infinite;
+}
+
+
+/* Dark theme */
+body.dark-theme {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --primary-color: #63a9ff;
+  --secondary-color: #1e1e2e;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Light theme */
+body.light-theme {
+  --bg-color: #f9f9f9;
+  --text-color: #222;
+  --primary-color: #007acc;
+  --secondary-color: #ddd;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Use CSS variables throughout your CSS for colors */
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(99, 169, 255, 0.4);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(99, 169, 255, 0.5);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(99, 169, 255, 0.4);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-right {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .page {
+    padding: 1rem;
+  }
+
+  .fab {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+}

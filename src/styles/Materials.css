@@ -1,0 +1,195 @@
+.materials-page {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem 1rem;
+  color: var(--text-color, #e0e0e0);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2, h3 {
+  color: var(--primary-color, #63a9ff);
+  margin-bottom: 1rem;
+  user-select: none;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.filters input[type="search"],
+.filters select {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--primary-color, #63a9ff);
+  background: var(--bg-dark, #292b3e);
+  color: var(--text-color, #e0e0e0);
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+  min-width: 200px;
+}
+
+.filters input[type="search"]:focus,
+.filters select:focus {
+  box-shadow: 0 0 0 3px var(--accent-color, #42f3ff);
+}
+
+.view-toggle button {
+  background: var(--secondary-color, #1e1e2e);
+  border: none;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.view-toggle button[aria-pressed="true"],
+.view-toggle button:hover,
+.view-toggle button:focus {
+  background: var(--primary-color, #63a9ff);
+  color: black;
+  outline: none;
+}
+
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.material-card {
+  background: var(--secondary-color, #1e1e2e);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(99, 169, 255, 0.1);
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.material-card:hover,
+.material-card:focus-within {
+  transform: translateY(-6px);
+  outline: none;
+}
+
+.material-card h3 {
+  color: var(--primary-color, #63a9ff);
+  margin-bottom: 0.5rem;
+}
+
+.material-card p {
+  color: var(--text-color, #ccc);
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.bookmark-btn {
+  background: transparent;
+  border: 2px solid var(--primary-color, #63a9ff);
+  color: var(--primary-color, #63a9ff);
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+  align-self: flex-start;
+}
+
+.bookmark-btn.bookmarked {
+  background-color: var(--primary-color, #63a9ff);
+  color: black;
+}
+
+.bookmark-btn:hover,
+.bookmark-btn:focus {
+  background-color: var(--accent-color, #42f3ff);
+  color: black;
+  outline: none;
+}
+
+.materials-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.material-list-item {
+  background: var(--secondary-color, #1e1e2e);
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(99, 169, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+.material-list-item:hover,
+.material-list-item:focus-within {
+  transform: translateY(-6px);
+  outline: none;
+}
+
+.material-list-item h3 {
+  color: var(--primary-color, #63a9ff);
+  margin-bottom: 0.3rem;
+}
+
+.material-list-item p {
+  color: var(--text-color, #ccc);
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+.admin-controls {
+  margin-top: 3rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.admin-controls button {
+  background: var(--primary-color, #63a9ff);
+  color: black;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.admin-controls button:hover,
+.admin-controls button:focus {
+  background: var(--accent-color, #42f3ff);
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .features-grid,
+  .materials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-controls {
+    flex-direction: column;
+  }
+}

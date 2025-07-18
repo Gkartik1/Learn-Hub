@@ -1,0 +1,256 @@
+.dashboard-student {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  color: var(--text-color, #e0e0e0);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+}
+
+h2, h3, h4 {
+  color: var(--primary-color, #63a9ff);
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Progress Tracker */
+.progress-tracker-section {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.progress-bar-container {
+  background-color: var(--bg-dark, #292b3e);
+  border-radius: 20px;
+  height: 25px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0.5rem auto 1rem auto;
+  overflow: hidden;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color, #63a9ff), var(--accent-color, #42f3ff));
+  width: 0;
+  border-radius: 20px 0 0 20px;
+  transition: width 1.5s ease-in-out;
+}
+
+/* Daily Streak */
+.daily-streak {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--accent-color, #42f3ff);
+}
+
+.streak-icon {
+  font-size: 1.5rem;
+}
+
+/* Materials Grid */
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.material-card {
+  background: var(--secondary-color, #1e1e2e);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(99, 169, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.material-card:hover,
+.material-card:focus-within {
+  transform: translateY(-6px);
+  outline: none;
+}
+
+.material-card h4 {
+  color: var(--primary-color, #63a9ff);
+  margin-bottom: 0.5rem;
+}
+
+.material-card p {
+  color: var(--text-color, #ccc);
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.material-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  background-color: var(--primary-color, #63a9ff);
+  color: black;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--accent-color, #42f3ff);
+  outline: none;
+}
+
+/* Bookmark button */
+.bookmark-btn.bookmarked {
+  background-color: var(--accent-color, #42f3ff);
+  color: black;
+}
+
+/* Roadmap Progress */
+.roadmap-progress {
+  margin-bottom: 2rem;
+}
+
+.roadmap-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 600px;
+  margin: auto;
+}
+
+.roadmap-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  color: var(--text-color, #ccc);
+  cursor: default;
+  user-select: none;
+}
+
+.roadmap-list li.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.roadmap-list input[type="checkbox"] {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+/* Announcements */
+.announcements-section {
+  margin-bottom: 2rem;
+}
+
+.announcement-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 700px;
+  margin: auto;
+}
+
+.announcement-list li {
+  background: var(--secondary-color, #1e1e2e);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 15px rgba(99, 169, 255, 0.1);
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+.announcement-list li:hover,
+.announcement-list li:focus-within {
+  transform: translateY(-5px);
+  outline: none;
+}
+
+.announcement-list h4 {
+  color: var(--primary-color, #63a9ff);
+  margin-bottom: 0.3rem;
+}
+
+.announcement-list small {
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+.announcement-list p {
+  color: var(--text-color, #ccc);
+  line-height: 1.4;
+}
+
+/* Bookmarked Resources */
+.bookmarked-resources {
+  max-width: 600px;
+  margin: auto;
+}
+
+.bookmarked-resources h3 {
+  color: var(--primary-color, #63a9ff);
+  margin-bottom: 1rem;
+}
+
+.bookmarked-resources ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.bookmarked-resources li {
+  background: var(--secondary-color, #1e1e2e);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.bookmarked-resources li:hover,
+.bookmarked-resources li:focus {
+  background-color: var(--accent-color, #42f3ff);
+  color: black;
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .materials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .roadmap-list {
+    max-width: 100%;
+  }
+
+  .announcement-list {
+    max-width: 100%;
+  }
+
+  .bookmarked-resources {
+    max-width: 100%;
+  }
+}

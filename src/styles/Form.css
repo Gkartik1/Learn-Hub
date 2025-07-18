@@ -1,0 +1,168 @@
+.form-container {
+  max-width: 400px;
+  margin: 3rem auto;
+  background: #1e1e2e;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(100, 100, 255, 0.1);
+  color: #fff;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #63a9ff;
+  font-size: 1.8rem;
+}
+
+.role-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.role-toggle button {
+  background-color: transparent;
+  border: 2px solid #444;
+  color: #ccc;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.role-toggle button.active,
+.role-toggle button:hover {
+  background-color: #63a9ff;
+  color: black;
+  border-color: #63a9ff;
+}
+
+form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-top: 0.3rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #292b3e;
+  color: #fff;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+form input:focus,
+form select:focus {
+  box-shadow: 0 0 0 2px #63a9ff;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #ccc;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.error {
+  color: #ff6b6b;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+
+.info-text {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+button[type="submit"] {
+  background-color: #63a9ff;
+  color: black;
+  font-weight: 700;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+  background-color: #42f3ff;
+  transform: scale(1.05);
+}
+
+button[type="submit"]:disabled {
+  background-color: #4a7bbd;
+  cursor: not-allowed;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  user-select: none;
+}
+
+.forgot-password {
+  text-align: right;
+  margin-top: 0.5rem;
+}
+
+.forgot-password a {
+  color: #63a9ff;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .form-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .role-toggle {
+    flex-direction: column;
+  }
+
+  .role-toggle button {
+    width: 100%;
+  }
+}

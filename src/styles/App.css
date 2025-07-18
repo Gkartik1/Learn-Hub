@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f0f;
+  color: #e0e0e0;
+}
+
+.page {
+  padding: 2rem;
+  animation: fadeIn 0.6s ease-in;
+}
+
+a {
+  color: #63a9ff;
+  text-decoration: none;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #63a9ff;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* Global CSS variables and theme classes */
+
+:root {
+  --bg-light: #f9f9f9;
+  --text-light: #222;
+  --primary-light: #007acc;
+  --secondary-light: #ddd;
+
+  --bg-dark: #121212;
+  --text-dark: #e0e0e0;
+  --primary-dark: #63a9ff;
+  --secondary-dark: #1e1e2e;
+}
+
+body.light-theme {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  --primary-color: var(--primary-light);
+  --secondary-color: var(--secondary-light);
+}
+
+body.dark-theme {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+  --primary-color: var(--primary-dark);
+  --secondary-color: var(--secondary-dark);
+}
+
+/* Basic styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-color);
+  padding: 1rem 2rem;
+  color: var(--primary-color);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.theme-select {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-select:hover,
+.theme-select:focus {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  outline: none;
+}

@@ -333,7 +333,7 @@ const pageData = {
     { id: 1, name: "Suman Das", expertise: "Frontend Developer @ Google", img: "https://i.pravatar.cc/150?u=a042581f4e29026704d" },
     { id: 2, name: "Mansi Gupta", expertise: "DSA Expert @ Microsoft", img: "https://i.pravatar.cc/150?u=a042581f4e29026705d" },
     { id: 3, name: "Rahul Verma", expertise: "Backend Developer @ Amazon", img: "https://i.pravatar.cc/150?u=a042581f4e29026706d" },
-    { id: 4, name: "Priya Chauhan", expertise: "Data Scientist @ Netflix", img: "https://i.pravatar.cc/150?u=a042581f4e29026707d" },
+    { id: 4, name: "Priya Chauhan", expertise: "Data Scientist @ Netflix", img: "pages\https://i.pravatar.cc/150?u=a042581f4e29026707d" },
   ],
   faqs: [
     { question: "Is LearnHub free to use?", answer: "Yes! Our Free Forever plan offers extensive resources, community access, and one roadmap. Premium plans unlock advanced features like priority mentorship and exclusive content." },
@@ -344,7 +344,7 @@ const pageData = {
   blogs: [
     { id: 1, title: "Breaking into Web Development in 2025", excerpt: "Learn how to start your journey in web development with practical tips and resources for the modern tech landscape.", url: "/blog/1", img: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600" },
     { id: 2, title: "DSA Tips from a Final Year Student", excerpt: "Effective strategies to master data structures and algorithms for placements, from someone who just cracked the code.", url: "/blog/2", img: "https://images.unsplash.com/photo-1550063873-ab792950096b?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600" },
-    { id: 3, title: "The Rise of DevOps: A Beginner's Guide", excerpt: "Understand the core principles of DevOps and why it's a crucial skill for modern software engineers.", url: "/blog/3", img: "https://images.unsplash.com/photo-1631106251203-d2fe74685513?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600" },
+    { id: 3, title: "The Rise of DevOps: A Beginner's Guide", excerpt: "Understand the core principles of DevOps and why it's a crucial skill for modern software engineers.", url: "/blog/3", img: "Devops-Solution-Benefits-Thumbnail.png" },
   ],
 };
 
@@ -603,10 +603,10 @@ const Newsletter = ({ t }) => {
 const Footer = () => (
     <footer className="footer">
         <div className="footer-content">
-            <div className="footer-col"><h4>LearnHub</h4><p>Empowering the next generation of tech talent in India.</p></div>
+            <div className="footer-col"><h4><a href="#top">LearnHub</a> </h4><p>Empowering the next generation of tech talent in India.</p></div>
             <div className="footer-col"><h4>Quick Links</h4><ul><li><a href="/roadmaps">Roadmaps</a></li><li><a href="/community">Community</a></li><li><a href="/blog">Blog</a></li><li><a href="/mentors">Mentors</a></li></ul></div>
-            <div className="footer-col"><h4>Legal</h4><ul><li><a href="/privacy">Privacy Policy</a></li><li><a href="/terms">Terms of Service</a></li></ul></div>
-            <div className="footer-col"><h4>Follow Us</h4><div className="social-icons"><a href="#" aria-label="Facebook"><FaFacebookF /></a><a href="#" aria-label="Twitter"><FaTwitter /></a><a href="#" aria-label="LinkedIn"><FaLinkedinIn /></a><a href="#" aria-label="Instagram"><FaInstagram /></a></div></div>
+            <div className="footer-col"><h4>Legal</h4><ul><li><a href="/privacy-policy">Privacy Policy</a></li><li><a href="/terms">Terms of Service</a></li></ul></div>
+            <div className="footer-col"><h4>Follow Us</h4><div className="social-icons"><a href="#" aria-label="Facebook"><FaFacebookF /></a><a href="https://x.com/Kartikg26436397" aria-label="Twitter"><FaTwitter /></a><a href="https://www.linkedin.com/in/kartik-garg-a76604306/" aria-label="LinkedIn"><FaLinkedinIn /></a><a href="https://www.instagram.com/kartik_garg_03/profilecard/?igsh=MWttdjY5dG9xeW9kOA==" aria-label="Instagram"><FaInstagram /></a></div></div>
         </div>
         <div className="footer-bottom"><p>&copy; {new Date().getFullYear()} LearnHub. All Rights Reserved. Made with ❤️ in India.</p></div>
     </footer>

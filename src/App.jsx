@@ -111,10 +111,14 @@ import Resources from './pages/Resources';
 import AdminUpload from './pages/AdminUpload';
 import NotFound from './pages/NotFound';
 
+
 import ProtectedRoute from './components/ProtectedRoute';
 import { useAuth } from './context/AuthContext';
 // import "./styles/App.css";
 // import 'bootstrap/dist/css/bootstrap.min.css';
+
+import PrivacyPolicy from "./pages/PrivacyPolicy"; // 1. IMPORT THE NEW COMPONENT
+// import TermsOfService from "./pages/TermsOfService";
 
 function App() {
   const { user } = useAuth();
@@ -178,6 +182,8 @@ function App() {
         <Route path="/community" element={<Community />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/payment" element={<Payment />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+       
 
         {/* 404 Not Found */}
         <Route path="*" element={<NotFound />} />

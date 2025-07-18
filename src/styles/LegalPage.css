@@ -1,0 +1,27 @@
+.legal-page {
+    background-color: var(--bg-content, #FFFFFF);
+    color: var(--text-primary, #212529);
+}
+
+.legal-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--bg-main, #F8F9FA);
+    border: 1px solid var(--border-color, #DEE2E6);
+    border-radius: 12px;
+    line-height: 1.7;
+}
+
+.legal-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.legal-content h2 {
+    font-size: 1.75rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color, #DEE2E6);
+    padding-bottom: 0.5rem;
+}

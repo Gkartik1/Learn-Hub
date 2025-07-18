@@ -1,26 +1,10 @@
 
 # React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-
-
 # LearnHub — Interactive Tech Learning Platform
 
 **LearnHub** is a modern, full-featured web platform designed to empower technology students and mentors by providing a comprehensive ecosystem for learning, collaboration, and growth.
 
 ---
-
-
-
-<img width="1141" height="999" alt="image" src="https://github.com/user-attachments/assets/4e005705-9c64-4652-ae7b-248709f4ece7" />
-
----
-
 ## 🚀 Features
 
 - **Role-based access control:** Separate dashboards and functionalities for students, mentors, and admins.
